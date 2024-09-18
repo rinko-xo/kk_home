@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>相册</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index.html">kk的云上小屋</a></li>
+            <li><a href="gallery.html">灵感集</a></li>
+            <li><a href="message_board.html">留言板</a></li>
+            <li><a href="brain_map.html">学习脑图</a></li>
+        </ul>
+    </nav>
+    <section class="gallery-section">
+        <h2>上传图片</h2>
+        <input type="file" id="imageUpload" multiple>
+        <input type="text" id="imageDescription" placeholder="请输入图片说明">
+        <button id="uploadButton">上传图片</button>
+
+        <div class="sorting-controls">
+            <label for="sortOptions">排序:</label>
+            <select id="sortOptions">
+                <option value="default">默认顺序</option>
+                <option value="name">按图片名称排序</option>
+                <option value="date">按上传时间排序</option>
+            </select>
+        </div>
+
+        <div id="gallery" class="gallery-grid"></div>
+        <div id="pagination" class="pagination"></div>
+    </section>
+    <script src="script.js"></script>
+</body>
+</html>

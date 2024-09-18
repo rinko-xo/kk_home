@@ -1,0 +1,158 @@
+/* 通用样式 */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #3e0a78, #3d0daf);
+    color: white;
+    padding: 0 100px; /* 留白 */
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* 导航栏居中 */
+    background-color: rgba(0, 0, 0, 0.5); /* 半透明深色背景 */
+    padding: 10px;
+    border-radius: 10px;
+}
+
+nav ul li {
+    margin-right: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+/* 照片编辑和删除按钮样式 */
+button {
+    background-color: #6d4caf;
+    border: none;
+    color: white;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 0px;
+    margin-right: 5px;
+}
+/* 悬停时改变按钮背景色 */
+button:hover {
+    background-color: #6b00b3;
+}
+
+/* index.html */
+.main-section {
+    text-align: center;
+    padding: 10px;
+}
+
+.image-container img {
+    max-width: 75%;
+    width: auto; /* 保持图片比例，避免溢出 */
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* 自动适应大小 */
+    gap: 10px;
+    padding: 20px;
+    justify-items: center; /* 居中显示 */
+}
+
+.gallery-grid img {
+    max-width: 100%;
+    max-height: 300px; /* 限制最大高度 */
+}
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination button {
+    margin: 0 5px;
+    padding: 5px 10px;
+    background-color: #3b0b73;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+
+
+/* 留言板 */
+h2 {
+    text-align: center;
+}
+/* ：新留言 */
+#newMessage {
+    background: rgba(75, 75, 75, 0.2);
+    color: white;
+    width: 90%;
+    height: 50px;
+    border-color: rgba(20, 1, 57, 0.52);
+    border-radius: 5px;
+    margin-right: 10px;
+}
+/* :设置textarea和button的基本样式 */
+#newMessage, #submitMessage {
+    vertical-align: bottom; /* 确保垂直底部对齐 */
+    margin-bottom: 20px;
+}
+.message-item {
+    background: rgba(20, 1, 57, 0.52);
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    position: relative;
+}
+.message-item::after {
+    content: '';
+    position: absolute;
+    bottom: 10px;
+    right: -15px;
+    width: 0;
+    height: 0;
+    border-left: 15px solid rgba(20, 1, 57, 0.52);
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+}
+
+
+/* gallery */
+.gallery-grid p {
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+/* 脑图排版 */
+.brain-map-container {
+    display: grid;
+    grid-template-areas: 
+        "top-left top-right"
+        "bottom-left bottom-right";
+    gap: 20px;
+    padding: 50px;
+}
+
+.note-area {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.note-area:hover {
+    background: rgba(28, 3, 87, 0.585);
+}
+
+.note-area h3 {
+    font-size: 1.5em;
+    font-weight: bold;
+    outline: none;
+}
+
+.note-area p {
+    outline: none;
+}
